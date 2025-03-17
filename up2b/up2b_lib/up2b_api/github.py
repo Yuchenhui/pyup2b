@@ -78,7 +78,7 @@ class Github(GitBase):
 
     def cdn_url(self, url: str) -> str:
         path = url.split("/main/")[-1]
-        return "https://cdn.jsdelivr.net/gh/%s/%s/%s" % (self.username, self.repo, path)
+        return "https://raw.githubusercontent.com/%s/%s/main/%s" % (self.username, self.repo, path)
 
     def __repr__(self):
         return "github.com"
